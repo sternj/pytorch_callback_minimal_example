@@ -9,7 +9,7 @@ Run the example with `python -m cb_test`-- [this assertion error](./src/cpp/cb_t
 
 ## Dependencies
 
-CMake, the CUDA toolkit, and Ninja all need to be moderately recent versions-- if it builds the error should occur, but I made this with:
+CMake, the CUDA toolkit, and Ninja all need to be moderately recent versions-- if it builds the error should occur, I successfully built it with:
 - Python 3.12.10
 - clang 18.1.8
 - cmake 3.31.7
