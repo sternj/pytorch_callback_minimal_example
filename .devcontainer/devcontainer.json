@@ -1,0 +1,34 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	// "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/python:3.12",
+
+	"runArgs": ["--gpus", "all"],
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.12",
+			"installPipx": true,
+			"installJupyterLab": true
+		},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers-community/features/llvm": {
+			"version": "18"
+		},
+		"ghcr.io/devcontainers-extra/features/cmake:1": {
+			"version": "3.31.7"
+		},
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
+			"cudaVersion": "12.8",
+			"installToolkit": true
+		},
+		"ghcr.io/devcontainers-extra/features/ninja-asdf:2": {}
+	},
+
+
+	"postCreateCommand": "pip3 install --user -r requirements.txt"
+
+}
